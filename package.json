@@ -1,0 +1,25 @@
+{
+  "name": "web_chat",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "client:dev": "vite",
+    "client:build": "vite build",
+    "preview": "vite preview",
+    "server:build": "tsc -p src/server/tsconfig.json",
+    "server:start": "nodemon --watch \"src/server/**\" --ext \"ts,json\" --ignore \"src/**/*.test.ts\" --exec \"ts-node src/server/index.ts\""
+  },
+  "dependencies": {
+    "fastify": "^4.24.3",
+    "solid-js": "^1.8.5"
+  },
+  "devDependencies": {
+    "@types/node": "^18.18.13",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2",
+    "vite": "^4.0.0",
+    "vite-plugin-solid": "^2.7.2"
+  }
+}
